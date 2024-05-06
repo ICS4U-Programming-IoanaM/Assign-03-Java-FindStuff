@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class FindStuff {
   /** Constructor for the ReverseString class. */
-  public FindStuff() {
+  private FindStuff() {
     // empty constructor
   }
 
@@ -28,8 +28,10 @@ public class FindStuff {
       FileWriter writer = new FileWriter(outputFile);
 
       // variables
-      String firstLine, secondLine;
-      int index, min;
+      String firstLine;
+      String secondLine;
+      int index;
+      int min;
 
       // loops until there is nothing to read
       while (scanner.hasNextLine()) {
@@ -70,7 +72,7 @@ public class FindStuff {
   }
 
   /**
-   * Recursive function that returns the index of the fist instance of a given character.
+   * Recursive function that returns index of the fist instance of a character.
    *
    * @param someString input string that will searched for ch
    * @param ch character to search through someString for
@@ -89,14 +91,26 @@ public class FindStuff {
     }
   }
 
+  /**
+ * Finds the minimum value in an integer array recursively.
+ * This method recursively traverses the array to find the smallest element.
+ *
+ * @param numArray the integer array in which to find the minimum value
+ * @param n the current index being evaluated
+ * @param min the current minimum value found so far
+ * @return the minimum value in the array
+ */
   public static int findMin(int[] numArray, int n, int min) {
-
+    // base case, if n longer that array
     if (n < numArray.length - 1) {
+      // element at index n is less than min
       if (numArray[n] < min) {
         min = numArray[n];
       }
+      // recursively call findMin() to process the next element in the array
       return findMin(numArray, n + 1, min);
     }
+    // return the minimum value
     return min;
   }
 }
