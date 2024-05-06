@@ -103,7 +103,7 @@ public final class FindStuff {
    * @param min the current minimum value found so far
    * @return the minimum value in the array
    */
-  public static int findMin(final int[] numArray, final int n, int min) {
+  public static int findMin(final int[] numArray, final int n, final int min) {
     // base case, if n longer that array
     if (n < numArray.length - 1) {
       // element at index n is less than min
