@@ -4,7 +4,7 @@ import java.io.FileWriter;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class FindStuff {
+public final class FindStuff {
   /** Constructor for the ReverseString class. */
   private FindStuff() {
     // empty constructor
@@ -79,7 +79,11 @@ public class FindStuff {
    * @param n index value
    * @return int n if ch in someString, else -1
    */
-  public static int findIndex(String someString, char ch, int n) {
+  public static int findIndex(
+      // params
+      final String someString,
+      final char ch,
+      final int n) {
     // Check if n is out of bounds
     if (n >= someString.length()) {
       return -1; // Base case: character not found in the string
@@ -92,15 +96,14 @@ public class FindStuff {
   }
 
   /**
- * Finds the minimum value in an integer array recursively.
- * This method recursively traverses the array to find the smallest element.
- *
- * @param numArray the integer array in which to find the minimum value
- * @param n the current index being evaluated
- * @param min the current minimum value found so far
- * @return the minimum value in the array
- */
-  public static int findMin(int[] numArray, int n, int min) {
+   * Finds the minimum value in an integer array recursively.
+   *
+   * @param numArray the integer array in which to find the minimum value
+   * @param n the current index being evaluated
+   * @param min the current minimum value found so far
+   * @return the minimum value in the array
+   */
+  public static int findMin(final int[] numArray, final int n, int min) {
     // base case, if n longer that array
     if (n < numArray.length - 1) {
       // element at index n is less than min
