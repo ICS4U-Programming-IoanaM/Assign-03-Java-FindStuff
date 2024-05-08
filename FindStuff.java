@@ -4,6 +4,15 @@ import java.io.FileWriter;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * This program finds a character in a string 
+ * and the min in a set of numbers.
+ *
+ * @author Ioana Marinescu
+ * @version 1.0
+ * @since 2024-05-07
+ */
+
 public final class FindStuff {
   /** Constructor for the ReverseString class. */
   private FindStuff() {
@@ -43,11 +52,14 @@ public final class FindStuff {
         String[] test = firstLine.split(",");
         index = findIndex(test[0], firstLine.charAt(firstLine.length() - 1), 0);
 
+        // split input by spaces
         String[] secondLineArrayStr = secondLine.split(" ");
+        // parse each element from String to int
         int[] secondLineArray = new int[secondLineArrayStr.length];
         for (int i = 0; i < secondLineArrayStr.length; i++) {
           secondLineArray[i] = Integer.parseInt(secondLineArrayStr[i]);
         }
+        // second function call
         min = findMin(secondLineArray, 0, secondLineArray[0]);
 
         // write to file
@@ -103,7 +115,7 @@ public final class FindStuff {
    * @param min the current minimum value found so far
    * @return the minimum value in the array
    */
-  public static int findMin(final int[] numArray, final int n, final int min) {
+  public static int findMin(final int[] numArray, final int n, int min) {
     // base case, if n longer that array
     if (n < numArray.length - 1) {
       // element at index n is less than min

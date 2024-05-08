@@ -1,0 +1,4 @@
+Index of first instance: 11
+Min: -9
+Index of first instance: -1
+Min: -23
