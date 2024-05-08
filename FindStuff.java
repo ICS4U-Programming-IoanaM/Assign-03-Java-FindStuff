@@ -5,14 +5,12 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- * This program finds a character in a string 
- * and the min in a set of numbers.
+ * This program finds a character in a string and the min in a set of numbers.
  *
  * @author Ioana Marinescu
  * @version 1.0
  * @since 2024-05-07
  */
-
 public final class FindStuff {
   /** Constructor for the ReverseString class. */
   private FindStuff() {
